@@ -6,7 +6,7 @@ import os
 import requests
 import matplotlib.pyplot as plt
 
-## Assume that `df_final` is already defined and has columns `high` and `low`
+# Assume that `df_final` is already defined and has columns `high` and `low`
 
 
 
