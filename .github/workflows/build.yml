@@ -1,0 +1,11 @@
+name: Daily Workflow
+on:
+  schedule:
+    - cron: "0 17 * * *"
+jobs:
+  my_job:
+    runs-on: windows-latest
+    steps:
+      - name: Step 1
+        run: global_quote.py
+      # Add more steps here as needed
