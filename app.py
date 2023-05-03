@@ -91,7 +91,7 @@ with tab2:
          st.write("If the one day high is much higher than the previous day's close, it could indicate that there is positive news or investor sentiment towards the company, which is driving up the price.  Cutoff is 5%. If difference is more than 5% then there can be a positive news about the stock. Yellow indicates less than 5. Green indicates more than 5.")
        stock_selected1 = st.selectbox("Select a stock:", options,key='tab2')
        stock_data1 = df_final[df_final['symbol'] == stock_selected1]
-       st.write(f"Selected Stock: {stock_selected}")
+       st.write(f"Selected Stock: {stock_selected1}")
        st.write(f"Percentage change: {stock_data1['diff_pct1'].values[0]}%")
        if stock_data1['color1'].values[0] == 'yellow':
            st.write("No positive news as such")
