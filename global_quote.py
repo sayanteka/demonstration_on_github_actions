@@ -7,7 +7,11 @@ import pandas as pd
 def dataframe():
 
     stock_symbol=['TATASTEEL','TATACOMM','YESBANK','IDFCFIRSTB']
-    api_key=os.environ.get('API_KEY')
+    try:
+       api_key = os.environ["API_KEY"]
+    except KeyError:
+        api_key = "Token not available!"
+    #api_key=os.environ.get('API_KEY')
     data_dict={}
     d=pd.DataFrame()
     for stock in stock_symbol:
