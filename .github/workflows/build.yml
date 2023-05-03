@@ -2,7 +2,7 @@ name: Daily Python Script
 
 on:
   schedule:
-    - cron: '45 18 * * *'
+    - cron: '40 12 * * *'
 
 jobs:
   build:
@@ -21,12 +21,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Set environment variable
-        run: |
-          echo "Setting API_KEY environment variable"
-          echo "API_KEY=${{ secrets.API_KEY }}" >> $GITHUB_ENV
+      
+        
 
       - name: Run Python Script
         env:
-          API_KEY: ${{ env.API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
         run: python global_quote.py
