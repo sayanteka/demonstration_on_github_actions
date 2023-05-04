@@ -26,6 +26,7 @@ def dataframe():
             data_dict[key] = [value]
         df=pd.DataFrame(data_dict)
         d=d.append(df,ignore_index=True)
-    d.to_excel('df_final.xlsx')
+    output_path = 'output/df.xlsx'
+    d.to_excel(output_path,index=False)
 dataframe()    
 

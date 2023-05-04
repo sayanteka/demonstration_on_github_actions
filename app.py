@@ -16,8 +16,8 @@ st.set_page_config(layout='wide')
 
   
 
-
-df_final=pd.read_excel('df_final.xlsx')
+output_path = 'output/df_final.xlsx'
+df_final=pd.read_excel(output_path)
 
 
 
