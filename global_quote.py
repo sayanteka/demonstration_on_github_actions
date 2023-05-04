@@ -16,7 +16,8 @@ def dataframe():
     data_dict={}
     d=pd.DataFrame()
     for stock in stock_symbol:
-        url=f'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={stock}.BSE&outputsize=full&apikey={API_KEY}'
+        url=url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol={}.BSE&outputsize=full&apikey={}'.format(stock, API_KEY)
+
         response = requests.get(url)
         
         data = response.json()["Global Quote"]
