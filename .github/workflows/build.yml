@@ -2,7 +2,7 @@ name: Daily Python Script
 
 on:
   schedule:
-    - cron: '27 20 * * *' 
+    - cron: '6 21 * * *' 
 
 jobs:
   build:
@@ -25,4 +25,4 @@ jobs:
       - name: Run Python Script
         env:
           API_KEY: ${{ secrets.API_KEY }}
-        run: python global_quote.py
+        run: python global_quote.py output/df_final.xlsx
