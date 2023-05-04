@@ -8,7 +8,7 @@ def dataframe():
 
     stock_symbol=['TATASTEEL','TATACOMM','YESBANK','IDFCFIRSTB']
     try:
-       API_KEY = os.environ["API_KEY"]
+       API_KEY =  os.environ.get('API_KEY')
        print(api_key)
     except KeyError:
         api_key = "Token not available!"

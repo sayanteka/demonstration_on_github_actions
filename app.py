@@ -108,7 +108,7 @@ with tab3:
          st.write("If the one day low is much lower than the previous day's close, it could indicate that there is negative news or investor sentiment towards the company, which is driving down the price.  Cutoff is -5%. If difference is more than -5% then there can be a negative news about the stock.")
        stock_selected2 = st.selectbox("Select a stock:", options,key='tab3')
        stock_data2 = df_final[df_final['symbol'] == stock_selected2]
-       st.write(f"Selected Stock: {stock_selected}")
+       st.write(f"Selected Stock: {stock_selected2}")
        st.write(f"Percentage change: {stock_data2['diff_pct2'].values[0]}%")
        if stock_data2['color2'].values[0] == 'red':
            st.write("Alarming")
