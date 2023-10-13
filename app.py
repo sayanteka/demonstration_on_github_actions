@@ -72,7 +72,7 @@ with tab1:
     with col2:
        st.header("View explanation of the analysis")
        with st.expander("Click to See explanation"):
-         st.write("If the one day high and low are relatively close together, it could indicate that the share is experiencing less volatility or trading in a narrow range.Cutoff is 5%. Green  indicates less than 5(less volatility). Red  indicates  more than 5(more volatility).")
+         st.write("If the one day high and low are relatively close together, it could indicate that the share is experiencing less volatility or trading in a narrow range.Cutoff is 5%.")
        stock_selected = st.selectbox("Select a stock:", options,key='tab1')
        stock_data = df_final[df_final['symbol'] == stock_selected]
        st.write(f"Selected Stock: {stock_selected}")
@@ -91,7 +91,7 @@ with tab2:
     with col4:
        st.header("View explanation of the analysis")
        with st.expander("Click to See explanation"):
-         st.write("If the one day high is much higher than the previous day's close, it could indicate that there is positive news or investor sentiment towards the company, which is driving up the price.  Cutoff is 5%. If difference is more than 5% then there can be a positive news about the stock. Yellow indicates less than 5. Green indicates more than 5.")
+         st.write("If the one day high is much higher than the previous day's close, it could indicate that there is positive news or investor sentiment towards the company, which is driving up the price.")
        stock_selected1 = st.selectbox("Select a stock:", options,key='tab2')
        stock_data1 = df_final[df_final['symbol'] == stock_selected1]
        st.write(f"Selected Stock: {stock_selected1}")
@@ -109,7 +109,7 @@ with tab3:
     with col6:
        st.header("View explanation of the analysis")
        with st.expander("Click to See explanation"):
-         st.write("If the one day low is much lower than the previous day's close, it could indicate that there is negative news or investor sentiment towards the company, which is driving down the price.  Cutoff is -5%. If difference is more than -5% then there can be a negative news about the stock.")
+         st.write("If the one day low is much lower than the previous day's close, it could indicate that there is negative news or investor sentiment towards the company, which is driving down the price.  Cutoff is -5%.")
        stock_selected2 = st.selectbox("Select a stock:", options,key='tab3')
        stock_data2 = df_final[df_final['symbol'] == stock_selected2]
        st.write(f"Selected Stock: {stock_selected2}")
